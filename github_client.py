@@ -1,3 +1,5 @@
+# Module responsible for fetching and validating GitHub issue data
+ 
 import requests
 import re
 from typing import Dict, Optional, Any
