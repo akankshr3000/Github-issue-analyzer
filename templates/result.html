@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result - GitHub Issue Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container result-page fade-in">
+        <div class="glass-card result-card">
+            <div class="result-header">
+                <h2>Analysis Result</h2>
+                <div class="actions">
+                    <a href="/" class="btn-secondary">Back</a>
+                    <button id="copy-btn" class="btn-copy">Copy JSON</button>
+                </div>
+            </div>
+
+            <div class="code-wrapper">
+                <pre><code id="json-output">{{ result | pretty_json }}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('copy-btn').addEventListener('click', function () {
+            const text = document.getElementById('json-output').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = this;
+                const originalText = btn.innerText;
+                btn.innerText = "Copied!";
+                btn.classList.add('copied');
+
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    </script>
+</body>
+
+</html>
