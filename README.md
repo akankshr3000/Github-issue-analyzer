@@ -7,6 +7,9 @@ The project helps developers and maintainers quickly understand and triage GitHu
  
 ## 🚀 Features
 
+- Designed for fast issue triaging and developer productivity
+ 
+
 - AI-driven GitHub issue analysis using OpenAI GPT
 - Fetches real-time issue data from public GitHub repositories
 - Strict JSON output suitable for automation and reporting
