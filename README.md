@@ -1,3 +1,4 @@
+
 # AI-Powered GitHub Issue Analyzer
 
 An AI-powered web application that analyzes GitHub issues and generates a structured JSON summary including issue type, priority score, suggested labels, and potential impact.  
@@ -167,3 +168,5 @@ http://127.0.0.1:5000
 Direct OpenAI API calls are used instead of higher-level abstraction libraries to keep the system minimal, transparent, and fast.
 
 ---
+
+ 
