@@ -1,3 +1,5 @@
+# Handles prompt engineering and OpenAI API integration
+ 
 import os
 import json
 from openai import OpenAI
